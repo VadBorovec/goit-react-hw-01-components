@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types';
 import { StatisticItem } from 'components/StatisticItem/StatisticItem';
 import { Card } from 'components/Card/Card.styled';
-import { StatisticsList, StatisticTitle } from './Statistics.styled';
+import { BoardHeader, BoardTitle, StatisticsList } from './Statistics.styled';
 
 export const Statistics = ({ title, stats }) => {
   return (
     <Card>
-      {title && <StatisticTitle>{title}</StatisticTitle>}
+      <BoardHeader>{title && <BoardTitle>{title}</BoardTitle>}</BoardHeader>
 
       <StatisticsList>
         {stats.map(({ id, label, percentage }) => (

@@ -18,5 +18,5 @@ export const StatLabel = styled.p`
 export const StatValue = styled.span`
   font-size: ${props => props.theme.spacing(8)};
   font-weight: 700;
-  color: ${props => props.theme.colors.accent};
+  color: ${props => props.theme.colors.white};
 `;

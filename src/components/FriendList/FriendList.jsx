@@ -1,40 +1,36 @@
 import PropTypes from 'prop-types';
 import { FriendListItem } from 'components/FriendListItem/FriendListItem';
 import { Card } from 'components/Card/Card.styled';
-import {
-  BoardHeader,
-  BoardTitle,
-  TitleTop,
-  TitleBottom,
-  LeaderBoardProfiles,
-} from './FriendList.styled';
+import { BoardHeader, BoardTitle, List } from './FriendList.styled';
 
 export const FriendList = ({ friendList }) => {
   return (
     <Card>
       <BoardHeader>
-        <BoardTitle>
-          <TitleTop>Forbes</TitleTop>
-          <TitleBottom>Leader board</TitleBottom>
-        </BoardTitle>
+        <BoardTitle>Friends</BoardTitle>
       </BoardHeader>
 
-      <LeaderBoardProfiles>
-        {friendList.map(item => (
+      <List>
+        {friendList.map(({ id, avatar, name, isOnline }) => (
           <FriendListItem
-            key={item.id}
-            name={item.name}
-            avatar={item.avatar}
-            isOnline={item.isOnline}
+            key={id}
+            avatar={avatar}
+            name={name}
+            isOnline={isOnline}
           />
         ))}
-      </LeaderBoardProfiles>
+      </List>
     </Card>
   );
 };
 
 FriendList.propTypes = {
   friendList: PropTypes.arrayOf(
-    PropTypes.shape({ id: PropTypes.string.isRequired })
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      avatar: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      isOnline: PropTypes.bool.isRequired,
+    })
   ).isRequired,
 };

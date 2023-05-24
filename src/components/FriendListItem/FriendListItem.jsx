@@ -1,21 +1,20 @@
 import PropTypes from 'prop-types';
 
-import { ForbesItem, Avatar, Name, Capital } from './FriendListItem.styled';
+import { Item, Status, Avatar, Name } from './FriendListItem.styled';
 
-import { theme } from 'styles/theme';
-
-export const FriendListItem = ({ name, avatar, isOnline }) => {
+export const FriendListItem = ({ id, avatar, name, isOnline }) => {
   return (
-    <ForbesItem>
-      <Capital>{isOnline}</Capital>
-      <Avatar src={avatar} alt={name} />
+    <Item key={id}>
+      <Status status={isOnline}>{isOnline}</Status>
+      <Avatar src={avatar} alt={name} width="48" />
       <Name>{name}</Name>
-    </ForbesItem>
+    </Item>
   );
 };
 
 FriendListItem.propTypes = {
-  name: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
   avatar: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
   isOnline: PropTypes.bool.isRequired,
 };

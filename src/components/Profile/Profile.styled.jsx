@@ -61,6 +61,6 @@ export const ItemLabel = styled.span`
 
 export const ItemValue = styled.span`
   font-size: ${props => props.theme.fontSizes.medium};
-  color: ${props => props.theme.colors.dark};
+  color: ${props => props.theme.colors.accent};
   font-weight: bold;
 `;
