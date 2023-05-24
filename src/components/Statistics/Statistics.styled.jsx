@@ -1,17 +1,17 @@
 import styled from '@emotion/styled';
 
 export const StatisticTitle = styled.h3`
-  font-size: ${props => props.theme.spacing(8)};
-  font-weight: 700;
+  font-size: ${props => props.theme.fontSizes.large};
+  text-align: center;
+  text-transform: uppercase;
+
   color: ${props => props.theme.colors.dark};
 
-  text-align: center;
+  margin-top: ${props => props.theme.spacing(8)};
 `;
 
 export const StatisticsList = styled.ul`
   display: flex;
   align-items: center;
   justify-content: center;
-
-  gap: ${props => props.theme.spacing(2)};
 `;

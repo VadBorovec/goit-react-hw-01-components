@@ -1,20 +1,18 @@
 import PropTypes from 'prop-types';
-import {
-  StatisticBox,
-  StatisticText,
-  StatisticCounter,
-} from './StatisticItem.styled';
+import { StatItem, StatLabel, StatValue } from './StatisticItem.styled';
+import { getRandomColor } from 'helpers/getRandomColor';
 
-export const StatisticItem = ({ title, total }) => {
+export const StatisticItem = ({ id, label, percentage }) => {
   return (
-    <StatisticBox>
-      <StatisticText>{title}</StatisticText>
-      <StatisticCounter>{total}</StatisticCounter>
-    </StatisticBox>
+    <StatItem key={id} style={{ backgroundColor: getRandomColor() }}>
+      <StatLabel>{label}</StatLabel>
+      <StatValue>{percentage}%</StatValue>
+    </StatItem>
   );
 };
 
 StatisticItem.propTypes = {
-  title: PropTypes.string.isRequired,
-  total: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+  percentage: PropTypes.number.isRequired,
 };
