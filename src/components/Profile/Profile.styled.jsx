@@ -1,32 +1,12 @@
 import styled from '@emotion/styled';
 
-export const Card = styled.div`
-  display: flex;
-  flex-direction: column;
-
-  width: ${props => props.theme.spacing(80)};
-  overflow: hidden;
-  margin: 0 auto;
-
-  box-shadow: ${props => props.theme.shadows.medium};
-  border-radius: ${props => props.theme.spacing(4)};
-  background: ${props => props.theme.colors.white};
-
-  &:hover,
-  &:focus {
-    background-color: #f1f1f1;
-    box-shadow: ${({ theme }) => theme.shadows.regular};
-    transform: scale(1.01);
-  }
-`;
-
 export const CardBody = styled.div`
+  max-width: ${props => props.theme.spacing(80)};
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  padding: ${props => props.theme.spacing(2)};
   margin: ${props => props.theme.spacing(8)} 0;
 `;
 
@@ -48,7 +28,7 @@ export const CardText = styled.p`
   font-size: ${props => props.theme.fontSizes.medium};
   letter-spacing: ${props => props.theme.spacing(0.2)};
   color: ${props => props.theme.colors.gray};
-  margin: ${props => props.theme.spacing(2)};
+  margin-bottom: ${props => props.theme.spacing(2)};
 `;
 
 export const StatsList = styled.ul`

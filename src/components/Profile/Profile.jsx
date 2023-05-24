@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
+import { Card } from 'components/Card/Card.styled';
 import {
-  Card,
   CardBody,
   CardPoster,
   CardTitle,
@@ -21,6 +21,10 @@ export const Profile = ({
   views,
   likes,
 }) => {
+  const formattedFollowers = followers.toLocaleString();
+  const formattedViews = views.toLocaleString();
+  const formattedLikes = likes.toLocaleString();
+
   return (
     <Card>
       <CardBody>
@@ -33,15 +37,15 @@ export const Profile = ({
       <StatsList>
         <StatsListItem>
           <ItemLabel>Followers</ItemLabel>
-          <ItemValue>{followers}</ItemValue>
+          <ItemValue>{formattedFollowers}</ItemValue>
         </StatsListItem>
         <StatsListItem>
           <ItemLabel>Views</ItemLabel>
-          <ItemValue>{views}</ItemValue>
+          <ItemValue>{formattedViews}</ItemValue>
         </StatsListItem>
         <StatsListItem>
           <ItemLabel>Likes</ItemLabel>
-          <ItemValue>{likes}</ItemValue>
+          <ItemValue>{formattedLikes}</ItemValue>
         </StatsListItem>
       </StatsList>
     </Card>

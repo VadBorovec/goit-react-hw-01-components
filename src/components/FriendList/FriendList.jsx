@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import { FriendListItem } from 'components/FriendListItem/FriendListItem';
+import { Card } from 'components/Card/Card.styled';
 import {
   BoardHeader,
-  Card,
   BoardTitle,
   TitleTop,
   TitleBottom,
