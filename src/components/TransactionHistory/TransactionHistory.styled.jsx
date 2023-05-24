@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-import { theme } from 'styles';
 
 export const Table = styled.table`
   text-align: center;
@@ -42,5 +41,10 @@ export const Th = styled.th`
 export const Tr = styled.tr`
   &:nth-of-type(odd) {
     background-color: ${({ theme }) => theme.colors.light};
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: ${({ theme }) => theme.colors.accent};
   }
 `;

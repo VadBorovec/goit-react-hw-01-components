@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import { Table, THead, Th, Tr, Td } from './TransactionHistory.styled';
-// import { formatDate } from 'helpers/formatDate';
 
 export const TransactionHistory = ({ items }) => {
   return (
