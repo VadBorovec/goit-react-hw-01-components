@@ -9,12 +9,8 @@ export const Statistics = ({ title, stats }) => {
       {title && <StatisticTitle>{title}</StatisticTitle>}
 
       <StatisticsList>
-        {stats.map((stat, index) => (
-          <StatisticItem
-            key={stat.id}
-            title={stat.label}
-            total={stat.percentage}
-          />
+        {stats.map(({ id, label, percentage }) => (
+          <StatisticItem key={id} label={label} total={percentage} />
         ))}
       </StatisticsList>
     </Card>

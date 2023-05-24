@@ -41,6 +41,7 @@ export const StatsList = styled.ul`
 `;
 
 export const StatsListItem = styled.li`
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
