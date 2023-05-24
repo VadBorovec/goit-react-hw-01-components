@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types';
-import { FriendListItem } from 'components/FriendListItem/FriendListItem';
-import { Card } from 'components/Card/Card.styled';
-import { BoardHeader, BoardTitle, List } from './FriendList.styled';
+import { FriendListItem } from 'components/FriendListItem';
+import { Card, CardHeader, CardTitle } from 'components/UiComponents';
+import { List } from './FriendList.styled';
 
 export const FriendList = ({ friendList }) => {
   return (
     <Card>
-      <BoardHeader>
-        <BoardTitle>Friends</BoardTitle>
-      </BoardHeader>
+      <CardHeader>
+        <CardTitle>Friends</CardTitle>
+      </CardHeader>
 
       <List>
         {friendList.map(({ id, avatar, name, isOnline }) => (

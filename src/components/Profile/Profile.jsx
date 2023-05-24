@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { Card } from 'components/Card/Card.styled';
+import { Card } from 'components/UiComponents';
 import {
   CardBody,
   CardPoster,

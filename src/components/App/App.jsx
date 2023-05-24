@@ -1,10 +1,10 @@
-import { Container } from 'components/Container/Container.styled';
-import { Section } from 'components/Section/Section.styled';
-import { Heading } from 'components/Heading/Heading.styled';
-import { Profile } from 'components/Profile/Profile';
-import { Statistics } from 'components/Statistics/Statistics';
-import { FriendList } from 'components/FriendList/FriendList';
-import { TransactionHistory } from 'components/TransactionHistory/TransactionHistory';
+import { Container, Section, Heading } from 'components/UiComponents';
+import {
+  Profile,
+  Statistics,
+  FriendList,
+  TransactionHistory,
+} from 'components';
 
 import user from 'data/user.json';
 import data from 'data/data.json';

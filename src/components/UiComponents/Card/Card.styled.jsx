@@ -19,3 +19,20 @@ export const Card = styled.div`
     transform: scale(1.01);
   }
 `;
+
+export const CardHeader = styled.div`
+  padding: ${props => props.theme.spacing(10)};
+
+  background-color: ${props => props.theme.colors.accent};
+`;
+
+export const CardTitle = styled.h2`
+  font-size: ${props => props.theme.fontSizes.large};
+  text-align: center;
+  text-transform: uppercase;
+
+  font-weight: 700;
+  color: ${props => props.theme.colors.white};
+
+  margin: 0;
+`;

@@ -1,18 +1,18 @@
 import PropTypes from 'prop-types';
-import { StatisticItem } from 'components/StatisticItem/StatisticItem';
-import { Card } from 'components/Card/Card.styled';
-import { BoardHeader, BoardTitle, StatisticsList } from './Statistics.styled';
+import { StatisticItem } from 'components/StatisticItem';
+import { Card, CardHeader, CardTitle } from 'components/UiComponents';
+import { List } from './Statistics.styled';
 
 export const Statistics = ({ title, stats }) => {
   return (
     <Card>
-      <BoardHeader>{title && <BoardTitle>{title}</BoardTitle>}</BoardHeader>
+      <CardHeader>{title && <CardTitle>{title}</CardTitle>}</CardHeader>
 
-      <StatisticsList>
+      <List>
         {stats.map(({ id, label, percentage }) => (
           <StatisticItem key={id} label={label} percentage={percentage} />
         ))}
-      </StatisticsList>
+      </List>
     </Card>
   );
 };
