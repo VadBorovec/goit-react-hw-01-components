@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { FriendListItem } from 'components/FriendListItem/FriendListItem';
 import {
   BoardHeader,
-  LeaderBoard,
+  Card,
   BoardTitle,
   TitleTop,
   TitleBottom,
@@ -11,7 +11,7 @@ import {
 
 export const FriendList = ({ friendList }) => {
   return (
-    <LeaderBoard>
+    <Card>
       <BoardHeader>
         <BoardTitle>
           <TitleTop>Forbes</TitleTop>
@@ -29,7 +29,7 @@ export const FriendList = ({ friendList }) => {
           />
         ))}
       </LeaderBoardProfiles>
-    </LeaderBoard>
+    </Card>
   );
 };
 

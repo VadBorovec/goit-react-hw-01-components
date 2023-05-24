@@ -15,6 +15,9 @@ export const App = () => {
   return (
     <Section>
       <Container>
+        <Heading marginBottom="50px" textAlign="center">
+          Profile
+        </Heading>
         <Profile
           username={user.username}
           tag={user.tag}
@@ -26,17 +29,17 @@ export const App = () => {
           likes={user.stats.likes}
         />
         <Heading marginTop="50px" marginBottom="50px" textAlign="center">
-          Task 2
+          Statistics
         </Heading>
         <Statistics title="Upload Stats" stats={data} />
         <Heading marginTop="50px" marginBottom="50px" textAlign="center">
-          Task 3
+          Friend List
         </Heading>
         <FriendList friendList={friends} />
         <Heading marginTop="50px" marginBottom="50px" textAlign="center">
-          Task 4
+          Transaction History
         </Heading>
-        <TransactionHistory text="TransactionHistory" />
+        <TransactionHistory items={transactions} />
       </Container>
     </Section>
   );
