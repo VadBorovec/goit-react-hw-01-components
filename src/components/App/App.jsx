@@ -25,23 +25,17 @@ export const App = () => {
           views={user.stats.views}
           likes={user.stats.likes}
         />
-        <Heading
-          marginTop="50px"
-          marginBottom="50px"
-          textAlign="center"
-        ></Heading>
-        <Statistics text="Statistics" />
-        <Heading
-          marginTop="50px"
-          marginBottom="50px"
-          textAlign="center"
-        ></Heading>
-        <FriendList text="FriendList" />
-        <Heading
-          marginTop="50px"
-          marginBottom="50px"
-          textAlign="center"
-        ></Heading>
+        <Heading marginTop="50px" marginBottom="50px" textAlign="center">
+          Task 2
+        </Heading>
+        <Statistics title="Upload Stats" stats={data} />
+        <Heading marginTop="50px" marginBottom="50px" textAlign="center">
+          Task 3
+        </Heading>
+        <FriendList friendList={friends} />
+        <Heading marginTop="50px" marginBottom="50px" textAlign="center">
+          Task 4
+        </Heading>
         <TransactionHistory text="TransactionHistory" />
       </Container>
     </Section>
