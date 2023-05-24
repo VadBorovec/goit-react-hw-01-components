@@ -1,5 +1,15 @@
 import PropTypes from 'prop-types';
-import { Card, StatsList, StatsListItem } from './Profile.styled';
+import {
+  Card,
+  CardBody,
+  CardPoster,
+  CardTitle,
+  CardText,
+  StatsList,
+  StatsListItem,
+  ItemLabel,
+  ItemValue,
+} from './Profile.styled';
 
 export const Profile = ({
   username,
@@ -13,25 +23,25 @@ export const Profile = ({
 }) => {
   return (
     <Card>
-      <div class="description">
-        <img src={avatar} alt={username} class="avatar" />
-        <p class="name">{username}</p>
-        <p class="tag">@{tag}</p>
-        <p class="location">{location}</p>
-      </div>
+      <CardBody>
+        <CardPoster src={avatar} alt={username} />
+        <CardTitle>{username}</CardTitle>
+        <CardText>@{tag}</CardText>
+        <CardText>{location}</CardText>
+      </CardBody>
 
       <StatsList>
         <StatsListItem>
-          <span class="label">Followers</span>
-          <span class="quantity">{followers}</span>
+          <ItemLabel>Followers</ItemLabel>
+          <ItemValue>{followers}</ItemValue>
         </StatsListItem>
         <StatsListItem>
-          <span class="label">Views</span>
-          <span class="quantity">{views}</span>
+          <ItemLabel>Views</ItemLabel>
+          <ItemValue>{views}</ItemValue>
         </StatsListItem>
         <StatsListItem>
-          <span class="label">Likes</span>
-          <span class="quantity">{likes}</span>
+          <ItemLabel>Likes</ItemLabel>
+          <ItemValue>{likes}</ItemValue>
         </StatsListItem>
       </StatsList>
     </Card>
