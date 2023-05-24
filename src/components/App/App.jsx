@@ -1,18 +1,22 @@
-import { Profile } from 'components/Profile/Profile';
-import { Statistics } from 'components/Statistics/Statistics';
-import { FriendList } from 'components/FriendList/FriendList';
-import { TransactionHistory } from 'components/TransactionHistory/TransactionHistory';
+import {
+  Profile,
+  Container,
+  Section,
+  Heading,
+  Statistics,
+  FriendList,
+  TransactionHistory,
+} from 'components';
 import user from 'data/user.json';
 import data from 'data/data.json';
 import friends from 'data/friends.json';
 import transactions from 'data/transactions.json';
-import { Container } from './App.styled';
-import { Section } from 'components/Section/Section';
 
 export const App = () => {
   return (
-    <Container>
-      <Section>
+    <Section>
+      <Container>
+        <Heading marginBottom="50px" textAlign="center"></Heading>
         <Profile
           username={user.username}
           tag={user.tag}
@@ -23,16 +27,19 @@ export const App = () => {
           views={user.stats.views}
           likes={user.stats.likes}
         />
-      </Section>
-      <Section>
+        <Heading marginTop="50px" marginBottom="50px" textAlign="center">
+          Task 2
+        </Heading>
         <Statistics text="Statistics" />
-      </Section>
-      <Section>
+        <Heading marginTop="50px" marginBottom="50px" textAlign="center">
+          Task 3
+        </Heading>
         <FriendList text="FriendList" />
-      </Section>
-      <Section>
+        <Heading marginTop="50px" marginBottom="50px" textAlign="center">
+          Task 4
+        </Heading>
         <TransactionHistory text="TransactionHistory" />
-      </Section>
-    </Container>
+      </Container>
+    </Section>
   );
 };
