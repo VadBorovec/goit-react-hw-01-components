@@ -3,12 +3,14 @@ import { FriendListItem } from 'components/FriendListItem';
 import { Card, CardHeader, CardTitle } from 'components/UiComponents';
 import { List } from './FriendList.styled';
 
-export const FriendList = ({ friendList }) => {
+export const FriendList = ({ title, friendList }) => {
   return (
     <Card>
-      <CardHeader>
-        <CardTitle>Friends</CardTitle>
-      </CardHeader>
+      {title && (
+        <CardHeader>
+          <CardTitle>{title}</CardTitle>
+        </CardHeader>
+      )}
 
       <List>
         {friendList.map(({ id, avatar, name, isOnline }) => (

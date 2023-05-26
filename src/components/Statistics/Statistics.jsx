@@ -6,7 +6,11 @@ import { List } from './Statistics.styled';
 export const Statistics = ({ title, stats }) => {
   return (
     <Card>
-      <CardHeader>{title && <CardTitle>{title}</CardTitle>}</CardHeader>
+      {title && (
+        <CardHeader>
+          <CardTitle>{title}</CardTitle>
+        </CardHeader>
+      )}
 
       <List>
         {stats.map(({ id, label, percentage }) => (

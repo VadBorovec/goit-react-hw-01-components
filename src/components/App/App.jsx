@@ -35,7 +35,7 @@ export const App = () => {
         <Heading marginTop="50px" marginBottom="50px" textAlign="center">
           Friend List
         </Heading>
-        <FriendList friendList={friends} />
+        <FriendList title="Friends" friendList={friends} />
         <Heading marginTop="50px" marginBottom="50px" textAlign="center">
           Transaction History
         </Heading>
